@@ -9,6 +9,7 @@
 package coe.unosquare.benefits.util;
 
 import coe.unosquare.benefits.order.Order;
+import coe.unosquare.benefits.paymentTypes.PaymentType;
 import coe.unosquare.benefits.product.Product;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -31,12 +32,12 @@ public final class PayOrderSimulator {
      * @return the double
      */
     public static Double payOrder(final Map<Product, Integer> products,
-                                  final String paymentType) {
+                                  final PaymentType paymentType) {
         Order order = new Order(products);
         Double subtotal = products.entrySet()
-                            .stream()
-                            .mapToDouble(product -> product.getKey().getPrice() * product.getValue())
-                            .sum();
+                .stream()
+                .mapToDouble(product -> product.getKey().getPrice() * product.getValue())
+                .sum();
         return new BigDecimal((subtotal - order.pay(paymentType)) / subtotal)
                 .setScale(2, RoundingMode.HALF_EVEN)
                 .doubleValue();

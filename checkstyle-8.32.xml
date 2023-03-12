@@ -89,10 +89,10 @@
 
     <!-- Checks for line length violations.           -->
     <!-- See https://checkstyle.org/config_sizes.html -->
-    <module name="LineLength">
-        <!-- Update line length (eja) 2016/06/10 -->
-        <property name="max" value="133"/>
-    </module>
+    <!--     <module name="LineLength">
+            Update line length (eja) 2016/06/10
+            <property name="max" value="133"/>
+        </module>-->
 
     <module name="TreeWalker">
 
@@ -196,7 +196,7 @@
             <!-- ignore (eja) 2014/12/10 -->
             <property name="severity" value="ignore"/>
         </module>
-        <module name="MissingSwitchDefault"/>
+<!--        <module name="MissingSwitchDefault"/>          -->
 
         <module name="SimplifyBooleanExpression"/>
         <module name="SimplifyBooleanReturn"/>

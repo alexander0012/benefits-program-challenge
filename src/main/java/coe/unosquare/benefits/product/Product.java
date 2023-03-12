@@ -12,11 +12,17 @@ package coe.unosquare.benefits.product;
  * The type Product.
  */
 public class Product {
-    /** The Product name. **/
+    /**
+     * The Product name.
+     */
     private String productName;
-    /** The Product price. **/
+    /**
+     * The Product price.
+     */
     private Double productPrice;
-    /** The Product type defined by: 1 = Basic need, 2 =  Work tool, 3 = Luxury.  **/
+    /**
+     * The Product type defined by: 1 = Basic need, 2 =  Work tool, 3 = Luxury.
+     */
     private Integer productType;
 
     /**
@@ -86,6 +92,11 @@ public class Product {
         productType = type;
     }
 
+    /**
+     * To string string.
+     *
+     * @return the string
+     */
     @Override
     public String toString() {
         return "Product{"
